@@ -50,83 +50,29 @@
           <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">View My Work</a>
             <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-shape">
+              <div class="profile-inner">
+                <div class="profile-avatar">
+                  <span>SM</span>
+                </div>
+              </div>
+              <div class="experience-badge">
+                <span class="exp-year">1.5+</span>
+                <span class="exp-text">Years</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Radar Skills Chart -->
-      <div class="radar-section">
-        <h3 class="radar-title">Skills Radar</h3>
-        <div class="radar-container">
-          <div class="radar-chart">
-            <svg viewBox="0 0 400 400">
-              <!-- Background circles -->
-              <circle cx="200" cy="200" r="150" class="radar-circle"/>
-              <circle cx="200" cy="200" r="120" class="radar-circle"/>
-              <circle cx="200" cy="200" r="90" class="radar-circle"/>
-              <circle cx="200" cy="200" r="60" class="radar-circle"/>
-              <circle cx="200" cy="200" r="30" class="radar-circle"/>
-              
-              <!-- Axis lines -->
-              <line x1="200" y1="200" x2="200" y2="50" class="radar-axis"/>
-              <line x1="200" y1="200" x2="330" y2="125" class="radar-axis"/>
-              <line x1="200" y1="200" x2="330" y2="275" class="radar-axis"/>
-              <line x1="200" y1="200" x2="200" y2="350" class="radar-axis"/>
-              <line x1="200" y1="200" x2="70" y2="275" class="radar-axis"/>
-              <line x1="200" y1="200" x2="70" y2="125" class="radar-axis"/>
-              
-              <!-- Skill polygon -->
-              <polygon class="radar-polygon" points="200,80 295,110 295,215 200,320 105,215 105,110"/>
-              
-              <!-- Skill points -->
-              <circle cx="200" cy="80" r="8" class="radar-point" data-skill="Java"/>
-              <circle cx="295" cy="110" r="8" class="radar-point" data-skill="Spring Boot"/>
-              <circle cx="295" cy="215" r="8" class="radar-point" data-skill="REST API"/>
-              <circle cx="200" cy="320" r="8" class="radar-point" data-skill="MySQL"/>
-              <circle cx="105" cy="215" r="8" class="radar-point" data-skill="JavaScript"/>
-              <circle cx="105" cy="110" r="8" class="radar-point" data-skill="React"/>
-              
-              <!-- Labels -->
-              <text x="200" y="35" class="radar-label">Java</text>
-              <text x="340" y="110" class="radar-label">Spring Boot</text>
-              <text x="340" y="220" class="radar-label">REST API</text>
-              <text x="200" y="375" class="radar-label">MySQL</text>
-              <text x="55" y="220" class="radar-label">JavaScript</text>
-              <text x="55" y="110" class="radar-label">React</text>
-            </svg>
-          </div>
-          <div class="radar-legend">
-            <div class="legend-row">
-              <span class="legend-dot" style="background: #6366f1"></span>
-              <span class="legend-name">Java</span>
-              <span class="legend-value">95%</span>
-            </div>
-            <div class="legend-row">
-              <span class="legend-dot" style="background: #ec4899"></span>
-              <span class="legend-name">Spring Boot</span>
-              <span class="legend-value">92%</span>
-            </div>
-            <div class="legend-row">
-              <span class="legend-dot" style="background: #06b6d4"></span>
-              <span class="legend-name">REST API</span>
-              <span class="legend-value">90%</span>
-            </div>
-            <div class="legend-row">
-              <span class="legend-dot" style="background: #10b981"></span>
-              <span class="legend-name">MySQL</span>
-              <span class="legend-value">88%</span>
-            </div>
-            <div class="legend-row">
-              <span class="legend-dot" style="background: #f59e0b"></span>
-              <span class="legend-name">JavaScript</span>
-              <span class="legend-value">85%</span>
-            </div>
-            <div class="legend-row">
-              <span class="legend-dot" style="background: #8b5cf6"></span>
-              <span class="legend-name">React</span>
-              <span class="legend-value">75%</span>
-            </div>
-          </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
         </div>
+        <p>Scroll to explore</p>
       </div>
     </section>
 
@@ -310,6 +256,49 @@
               <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
             <span class="skill-percentage">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Radar Skills Chart -->
+      <div class="radar-section">
+        <h3 class="radar-title">Skills Radar</h3>
+        <div class="radar-container">
+          <div class="radar-chart">
+            <svg viewBox="0 0 400 400">
+              <circle cx="200" cy="200" r="150" class="radar-circle"/>
+              <circle cx="200" cy="200" r="120" class="radar-circle"/>
+              <circle cx="200" cy="200" r="90" class="radar-circle"/>
+              <circle cx="200" cy="200" r="60" class="radar-circle"/>
+              <circle cx="200" cy="200" r="30" class="radar-circle"/>
+              <line x1="200" y1="200" x2="200" y2="50" class="radar-axis"/>
+              <line x1="200" y1="200" x2="330" y2="125" class="radar-axis"/>
+              <line x1="200" y1="200" x2="330" y2="275" class="radar-axis"/>
+              <line x1="200" y1="200" x2="200" y2="350" class="radar-axis"/>
+              <line x1="200" y1="200" x2="70" y2="275" class="radar-axis"/>
+              <line x1="200" y1="200" x2="70" y2="125" class="radar-axis"/>
+              <polygon class="radar-polygon" points="200,80 295,110 295,215 200,320 105,215 105,110"/>
+              <circle cx="200" cy="80" r="8" class="radar-point"/>
+              <circle cx="295" cy="110" r="8" class="radar-point"/>
+              <circle cx="295" cy="215" r="8" class="radar-point"/>
+              <circle cx="200" cy="320" r="8" class="radar-point"/>
+              <circle cx="105" cy="215" r="8" class="radar-point"/>
+              <circle cx="105" cy="110" r="8" class="radar-point"/>
+              <text x="200" y="35" class="radar-label">Java</text>
+              <text x="340" y="110" class="radar-label">Spring Boot</text>
+              <text x="340" y="220" class="radar-label">REST API</text>
+              <text x="200" y="375" class="radar-label">MySQL</text>
+              <text x="55" y="220" class="radar-label">JavaScript</text>
+              <text x="55" y="110" class="radar-label">React</text>
+            </svg>
+          </div>
+          <div class="radar-legend">
+            <div class="legend-row"><span class="legend-dot" style="background:#6366f1"></span><span class="legend-name">Java</span><span class="legend-value">95%</span></div>
+            <div class="legend-row"><span class="legend-dot" style="background:#ec4899"></span><span class="legend-name">Spring Boot</span><span class="legend-value">92%</span></div>
+            <div class="legend-row"><span class="legend-dot" style="background:#06b6d4"></span><span class="legend-name">REST API</span><span class="legend-value">90%</span></div>
+            <div class="legend-row"><span class="legend-dot" style="background:#10b981"></span><span class="legend-name">MySQL</span><span class="legend-value">88%</span></div>
+            <div class="legend-row"><span class="legend-dot" style="background:#f59e0b"></span><span class="legend-name">JavaScript</span><span class="legend-value">85%</span></div>
+            <div class="legend-row"><span class="legend-dot" style="background:#8b5cf6"></span><span class="legend-name">React</span><span class="legend-value">75%</span></div>
           </div>
         </div>
       </div>
