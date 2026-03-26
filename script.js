@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Ensure body is visible
+  document.body.classList.remove('opacity-0');
+  document.body.classList.add('opacity-1');
+  
   // Typing animation with multiple statements
   const typedTextElement = document.querySelector('.typed-text');
   const phrases = [
@@ -401,10 +405,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-// Add CSS for loading state
-document.body.style.opacity = '0';
-document.body.style.transition = 'opacity 0.5s ease';
 
 // Add smooth anchor scrolling with offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
