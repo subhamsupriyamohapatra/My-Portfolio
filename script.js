@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'Software Engineer',
     'FullStack Developer'
   ];
-  // test vercel deploy
+  // test vercel deploy test
   let phraseIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
