@@ -75,6 +75,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }, index * 100);
   });
 
+  // Circular Skills Chart Animation
+  const chartSegments = document.querySelectorAll('.chart-segment');
+  const chartCircle = document.querySelector('.chart-circle');
+  const chartPercent = document.querySelector('.chart-percent');
+  const chartLabel = document.querySelector('.chart-label');
+  
+  const chartObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        chartSegments.forEach((segment, index) => {
+          const skill = parseInt(segment.dataset.skill);
+          setTimeout(() => {
+            segment.classList.add('animated');
+          }, index * 200);
+        });
+        
+        // Animate center text
+        let percent = 0;
+        const targetPercent = 95;
+        const counter = setInterval(() => {
+          percent += 1;
+          chartPercent.textContent = percent + '%';
+          if (percent >= targetPercent) {
+            clearInterval(counter);
+          }
+        }, 30);
+        
+        chartObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (chartCircle) {
+    chartObserver.observe(chartCircle);
+  }
+
   const navLinks = document.querySelectorAll('.nav-link');
   
   navLinks.forEach(link => {
