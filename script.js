@@ -108,6 +108,26 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll);
   handleScroll();
 
+  // Mobile menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinksContainer = document.querySelector('.nav-links');
+  
+  if (hamburger && navLinksContainer) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinksContainer.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinksContainer.classList.remove('active');
+      });
+    });
+  }
+
   // Social icons pop effect
   const socialIcons = document.querySelectorAll('.social-icon, .social-profile');
   socialIcons.forEach(icon => {

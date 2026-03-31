@@ -170,13 +170,27 @@ body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 10001;
+  padding: 5px;
 }
 
 .hamburger span {
   width: 25px;
   height: 2px;
   background: var(--light);
-  transition: all 0.3s var(--transition-smooth);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Hero Section */
@@ -1449,10 +1463,52 @@ section {
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
+    justify-items: center;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .greeting {
+    text-align: center;
+  }
+
+  .name {
+    text-align: center;
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .typed-text {
+    text-align: center;
+  }
+
+  .cursor {
+    text-align: center;
+  }
+
+  .tagline {
+    text-align: center;
   }
 
   .hero-buttons {
     justify-content: center;
+  }
+
+  .hero-visual {
+    display: none;
   }
 
   .name {
