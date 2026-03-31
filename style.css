@@ -24,8 +24,13 @@
   box-sizing: border-box;
 }
 
+html, body, main, section, header, footer, nav, article, aside, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, a, span {
+  visibility: visible !important;
+}
+
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
 }
 
 body {
@@ -33,7 +38,7 @@ body {
   background: var(--dark);
   color: var(--light);
   overflow-x: hidden;
-  perspective: 1000px;
+  min-height: 100vh;
 }
 
 /* Navbar Styles */
@@ -46,15 +51,18 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(20px);
-  z-index: 1000;
-  transform-style: preserve-3d;
-  transition: transform 0.5s var(--transition-smooth);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 10000;
+  transition: all 0.4s ease;
 }
 
-.navbar:hover {
-  transform: translateZ(20px);
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -114,11 +122,20 @@ body {
 
 .nav-link:hover {
   color: var(--light);
-  transform: translateZ(10px);
 }
 
 .nav-link:hover::before {
   width: 100%;
+}
+
+.nav-link.active {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+.nav-link.active::before {
+  width: 100%;
+  background: var(--gradient-1);
 }
 
 .social-links {
@@ -169,7 +186,20 @@ body {
   align-items: center;
   padding: 120px 5% 50px;
   position: relative;
-  transform-style: preserve-3d;
+  transform-style: flat !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+main {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+section {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .hero-content {
