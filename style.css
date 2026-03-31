@@ -1508,7 +1508,9 @@ section {
   }
 
   .hero-visual {
-    display: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
   }
 
   .name {
