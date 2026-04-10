@@ -1,9 +1,17 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Portfolio Website",
+  "description": "Portfolio Website with Contact Form",
+  "main": "index.js",
   "scripts": {
-    "start": "npx serve ."
+    "start": "node index.js",
+    "dev": "node index.js"
   },
-  "private": true
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "googleapis": "^171.4.0",
+    "nodemailer": "^6.10.1"
+  }
 }
